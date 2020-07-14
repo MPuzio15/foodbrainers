@@ -1,0 +1,50 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static "fontawesome/css/all.min.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'restaurants/style.css' %}">
+    <!-- <script type="text/javascript" src="{% static 'restaurants/index.js' %}" async='async'></script> -->
+    <title>FoodBrainers &bull; {{title}}</title>
+</head>
+
+<body>
+
+    <main class='main'>
+        <button class='hamburger nav'></button>
+        <nav class='nav_main'>
+            {% if user.is_authenticated %}
+            <a href="{% url 'restaurants:main' %}"><p>Witaj, {{ user.first_name}}</p></a>
+                <a href="{% url 'logout' %}">Wyloguj się</a>
+            {% else %}
+                <a href="{% url 'login' %}">Zaloguj się</a>
+            {% endif %}
+            <a href="{% url 'restaurants:cart' %}?address={{ address|urlencode }}"><span class='cart'>Koszyk: {{ request.session.cart|length }}</span></a>
+        </nav>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <br>
+      
+        {% block content %} {% endblock %}
+    </main>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+</body>
+<script>
+    let hamburger = document.querySelector('.nav');
+    let nav = document.querySelector('.nav_main');
+    hamburger.addEventListener('click', (event)=>{
+        event.preventDefault();
+      hamburger.classList.toggle('active')
+      nav.classList.toggle('active');
+    })
+</script> 
+</html>
+

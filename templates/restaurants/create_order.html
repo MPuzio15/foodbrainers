@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class='cart_container'>
+
+
+<h3>Twoje zamównienie</h3>
+
+<form method='POST' action="{% url 'restaurants:create_order' %}?address={{ address|urlencode }}">
+    {% csrf_token %}
+    <table> 
+        {{ form.as_table }}
+    </table>
+    <input type='submit' value='Złóż zamówienie'>
+</form>
+</section>
+{% endblock %}

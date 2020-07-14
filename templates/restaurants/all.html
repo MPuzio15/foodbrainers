@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<main class="items">
+    
+    <section class="items_slider">
+        <h3>W Twojej okolicy:</h3>
+        <section class='items__group'>
+        {% for restaurant in restaurants %}
+            <a class='link' href="{% url 'restaurants:details' restaurant.id %}?address={{ address|urlencode }}">
+                <div class="item">
+                    <div class="logo"><img src="/media/{{restaurant.logo}}" alt="restaurant's logo">
+                    </div>
+                    <div class='desc'>
+                        <div class="name">
+                            <!-- <h4><a href="{% url 'restaurants:details' restaurant.id %}?address={{ address|urlencode }}">{{restaurant.name}}</a></h4> -->
+                            <p class='p_name'>Kuchnia: {{ restaurant.cuisines.all|join:', ' }}</p>
+                        </div>
+                        <div class='other__details'>
+                            <p class='half'>Minimalna kwota: <span>{{ restaurant.min_order_amount }} zł</span></p>
+                            <p class='half'>Koszt dostawy: <span>{{ restaurant.delivery_cost|floatformat:0}} zł </span> </p>
+                            <!-- <p>Odległość: {{ restaurant.distance }}</p> -->
+                        </div>
+                        <p class='opening_hours'>Zapraszamy: {{ restaurant.opening_hours }}</p>
+                        
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+        </section>
+        <section class='pagination'>
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                    <a class='first' href="?address={{address|urlencode}}&page=1">&laquo; first</a>
+                    <a class='previous' href="?address={{address|urlencode}}&page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+        
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                    </span>
+                    {% if page_obj.has_next %}
+                    <a class='next' href="?address={{address|urlencode}}&page={{ page_obj.next_page_number }}">next</a>
+                    <a class='last' href="?address={{address|urlencode}}&page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        </section>
+    </section>
+
+
+</main>
+
+<!-- <table>
+    <tr>
+        <th>
+            Nazwa Restauracji
+        </th>
+        <th>
+            Opis
+        </th>
+        <th>
+            Współrzędne
+        </th>
+        <th>
+            Odległość
+        </th>
+        <th>
+            Kuchnia
+        </th>
+        <th>
+            Godziny otwarcia
+        </th>
+        <th>
+            Minimalna Kwota Zamówienia
+        </th>
+        <th>
+            Koszt dostawy
+        </th>
+    </tr>
+    {% for restaurant in restaurants %}
+    <tr>
+        <td>
+            <a href="{% url 'restaurants:details' restaurant.id %}">{{restaurant.name}}</a>
+
+        </td>
+        <td>
+            {{restaurant.description}}
+        </td>
+        <td>
+            {{restaurant.latitude}},
+            {{restaurant.longitude}}
+        </td>
+        <td>
+            {{restaurant.cuisines.all|join:', '}}
+        </td>
+        <td>
+            {{restaurant.opening_hours}}
+        </td>
+        <td>
+            {{restaurant.min_order_amount}}
+        </td>
+        <td>
+            {{ restaurant.min_order_amount}}
+        </td>
+
+    </tr>
+    {% endfor %}
+</table> -->
+
+{% endblock %}

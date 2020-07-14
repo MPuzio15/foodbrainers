@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class='cart_container'>
+<h3>Twoj koszyk</h3>
+
+<table class='cart_table'>
+    <tr>
+        <th>Restauracja</th>
+        <th>Danie</th>
+        <th>Liczba</th>
+        <th>Kwota</th>
+    </tr>
+    {% for entry in cart %}
+
+    <tr>
+        <td>{{ entry.restaurant }}</td>
+        <td>{{ entry.course }}</td>
+        <td>{{ entry.quantity }}</td>
+        <td>{{ entry.amount }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h3>Suma: {{ order_amount }}</h3>
+<a class='continue' href = "{% url 'restaurants:create_order'%}?address={{ address|urlencode }}">Złóż zamównienie</a>
+<a class='continue' href='{% url "restaurants:all" %}?address={{ address|urlencode }}'>Kontynuuj zakupy</a>
+</section>
+{% endblock %}

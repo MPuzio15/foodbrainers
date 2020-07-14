@@ -1,0 +1,1 @@
+web: gunicorn foodbrainers.wsqi --log-file -

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- # nazwa z kontekstu object_name -->
+<div class="details_container">
+    <div class='modal'>
+        <section class='modal_courses'>
+            <h3>{{ restaurant.name }}</h3>
+            {% for course in restaurant.menu.all%}
+                <div class ='course'>
+                    <p class='course_name'>{{ course.name }}</p>
+                    <p>{{ course.description }}</p>
+                    <p class='price'>{{ course.price }}zł</p>
+                    <div class='yes_no'>
+                        <p>Pikantne?</p>
+                        <p class='bool'>{{ course.is_spicy|yesno }}</p>
+                        <p>Wegańskie?</p>
+                        <p class='bool'>{{ course.is_vegan|yesno }}</p>
+                        <p>Bezglutenowe?</p>
+                        <p class='bool'>{{ course.is_glutenfree|yesno }}</p>
+                        <!-- podajemy parametr next zeby nas przekierowalo, pobieramy cala sciezke przekazywana w url: 
+                        -->
+                        <a class='add' href='{% url "restaurants:add_to_card" course.pk %}?next={{ request.get_full_path }}'>Do koszyka</a>
+                    </div>
+                    
+                </div>
+            </a>
+            {% endfor %}
+
+            <!-- <table>
+                <tr>
+                    <th>Danie</th>
+                    <th>Opis</th>
+                    <th>Cena</th>
+                    <th>Pikantne?</th>
+                    <th>Wegańskie?</th>
+                    <th>Bezglutenowe?</th>
+                    <th>Zamówienie</th>
+                </tr>
+                bo many to many many relacje a restaurant.all jest managerem-->
+                <!-- robimy nowe okienko z daniem -->
+                <!-- {% for course in restaurant.menu.all%}
+                <tr>
+                    <td>{{ course.name }}</td>
+                    <td>{{ course.description }}</td>
+                    <td>{{ course.price }}</td>
+                     to jest taki filt ktory z wartosci boolianowskiej zrobi nam tekst -->
+                    <!-- <td>{{ course.is_spicy|yesno }}</td>
+                    <td>{{ course.is_vegan|yesno }}</td>
+                    <td>{{ course.is_glutenfree|yesno }}</td>
+                    <td><a href='{% url "restaurants:add_to_card" course.pk %}?next={{ request.get_full_path }}'>Dodaj do koszyka</a></td>
+                </tr>
+                {% endfor %} -->
+            <!-- </table> -->
+        </section>    
+        <section class='modal_location'>
+            <h5> Jak nas znaleźć: </h5>
+            <div id="map"></div>
+            <p>{{ restaurant.latitude|json_script:"lat" }}</p>
+            <p>{{ restaurant.longitude|json_script:"lng" }}</p>
+            <!-- <h4> Kuchnia: </h4>
+            <p>{{ restaurant.cuisines }}</p>
+            <h5> Godziny otwarcia: </h5>
+            <p>{{ restaurant.opening_hours }}</p>
+            <h5> Minimalny koszt zamówienia: </h5>
+            <p>{{ restaurant.min_order_amount }} zł</p> -->
+            <!-- <h4> Menu: </h4>
+            <div>{{ restaurant.menu }}</div> -->
+        </section>  
+    </div>
+</div>
+
+<script>
+    let boolList = document.getElementsByClassName('bool');
+    for (let i = 0, len = boolList.length; i < len; i++) {
+        changeContent(boolList[i]);
+    }
+    function changeContent(element) {
+        element.textContent === 'yes'? element.innerHTML = 'TAK': element.innerHTML = 'NIE';
+    }
+
+    initMap = () => {
+        let latitude = JSON.parse(document.getElementById('lat').textContent);
+        let longitude = JSON.parse(document.getElementById('lng').textContent);
+        let location = { lat: latitude, lng: longitude }
+        let itemMap = new google.maps.Map(document.getElementById('map'), {
+            center: location,
+            zoom: 15
+        });
+        let marker = new google.maps.Marker({ position: location, map: itemMap })
+    };
+</script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBSDGXS3VSGw5883NK0Jola2YDel1L3tQ&callback=initMap">
+    </script>
+
+
+{% endblock %}

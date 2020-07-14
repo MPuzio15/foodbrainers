@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static%}
+{% block content %}
+<!-- <header>
+    <img src="{% static 'restaurants/images/logo.png' %}">
+</header> -->
+
+
+<main class="main__main__page">
+
+    <form method='GET' action="{% url 'restaurants:all' %}" enctype="multipart/form-data">
+        <!--     <div class="inputs">
+            <p>
+                <label for="id_latitude"></label>
+                <input type="number" name="latitude" class='main__input' value="50.05"
+                    placeholder="szerokość geograficzna" id="id_latitude">
+            </p>
+            <p>
+                 <label for="id_longitude">Longitude</label> 
+                <input type="number" name="longitude" class='main__input' value="20.0"
+                    placeholder="długość geograficzna" id="id_longitude">
+            </p>
+        </div> -->
+        <div class="inputs">
+            {{ form.address }}
+        </div>
+        <button type="submit" id="seach__button"><i class="fas fa-search"></i></button>
+
+    </form>
+</main>
+
+{% endblock %}

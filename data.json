@@ -1,0 +1,1270 @@
+[
+{
+  "model": "restaurants.cuisine",
+  "pk": 1,
+  "fields": {
+    "name": "Ameryka\u0144ska"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 2,
+  "fields": {
+    "name": "Baskijska"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 3,
+  "fields": {
+    "name": "Europejska"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 4,
+  "fields": {
+    "name": "Hebrajska"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 5,
+  "fields": {
+    "name": "Japo\u0144ska"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 6,
+  "fields": {
+    "name": "Meksyka\u0144ska"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 7,
+  "fields": {
+    "name": "Pierogi"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 8,
+  "fields": {
+    "name": "Pizza"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 9,
+  "fields": {
+    "name": "Polska"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 10,
+  "fields": {
+    "name": "Sycylijska"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 11,
+  "fields": {
+    "name": "Tajska"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 12,
+  "fields": {
+    "name": "Wietnamska"
+  }
+},
+{
+  "model": "restaurants.cuisine",
+  "pk": 13,
+  "fields": {
+    "name": "W\u0142oska"
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 1,
+  "fields": {
+    "name": "Gusto",
+    "description": "Pizzeria Gusto \u2013 najlepsza w\u0142oska pizza w Krakowie",
+    "latitude": 50.017857,
+    "longitude": 19.9857155,
+    "logo": "logo/gusto.png",
+    "opening_hours": "12:00-22:00",
+    "min_order_amount": 30,
+    "cuisines": [
+      8
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 2,
+  "fields": {
+    "name": "Malborski Ogr\u00f3d",
+    "description": "Malborski Ogr\u00f3d - Pizzera & Trattoria",
+    "latitude": 50.025338,
+    "longitude": 19.9718585,
+    "logo": "logo/malborski_ogrod.png",
+    "opening_hours": "11:30-22:00",
+    "min_order_amount": 30,
+    "cuisines": [
+      8
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 3,
+  "fields": {
+    "name": "Bar Orientalny Phuong Dong",
+    "description": "Kuchnia azjatycka nale\u017cy do najzdrowszych!",
+    "latitude": 50.007032,
+    "longitude": 19.963414,
+    "logo": "logo/phuong_dong.png",
+    "opening_hours": "11:00-20:20",
+    "min_order_amount": 30,
+    "cuisines": [
+      12
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 4,
+  "fields": {
+    "name": "Pieprz i Wanilia",
+    "description": "Poczuj smak Polski",
+    "latitude": 50.015293,
+    "longitude": 19.95047,
+    "logo": "logo/pieprz_i_wanilia.png",
+    "opening_hours": "11:00-22:00",
+    "min_order_amount": 30,
+    "cuisines": [
+      9
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 5,
+  "fields": {
+    "name": "Sushi Craft",
+    "description": "Najlepsze sushi w Krakowie",
+    "latitude": 50.081046,
+    "longitude": 19.957184,
+    "logo": "logo/sushi_kraft.png",
+    "opening_hours": "11:00-22:00",
+    "min_order_amount": 50,
+    "cuisines": [
+      5
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 6,
+  "fields": {
+    "name": "Ginza Sushi",
+    "description": "Sushi na ka\u017cd\u0105 kiesze\u0144 - smacznie, tanio, zdrowo!!!",
+    "latitude": 50.095543,
+    "longitude": 19.997422,
+    "logo": "logo/ginza_sushi.png",
+    "opening_hours": "12:00-22:00",
+    "min_order_amount": 40,
+    "cuisines": [
+      5
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 7,
+  "fields": {
+    "name": "Florentina",
+    "description": "Dania bazuj\u0105ce na \u015bwie\u017cych sk\u0142adnikach lokalnych.",
+    "latitude": 50.055959,
+    "longitude": 19.938158,
+    "logo": "logo/florentina.png",
+    "opening_hours": "18:00-23:00",
+    "min_order_amount": 100,
+    "cuisines": [
+      9
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 8,
+  "fields": {
+    "name": "Restauracja Kogel Mogel",
+    "description": "Tradycyjna kuchnia polska w nowym wydaniu",
+    "latitude": 50.06066,
+    "longitude": 19.940787,
+    "logo": "logo/kogel_mogel_S8GJ9YC.png",
+    "opening_hours": "12:00-23:00",
+    "min_order_amount": 30,
+    "cuisines": [
+      9
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 9,
+  "fields": {
+    "name": "ORZO people-music-nature",
+    "description": "Naturalnie go\u015bcinna miejska przestrze\u0144 i przepyszna kuchnia. Poczuj si\u0119 wygodnie \u2013 zrelaksuj si\u0119, pos\u0142uchaj muzyki i z\u0142ap oddech od miejskiego zgie\u0142ku. Wszystko w pozytywnym \u015brodowisku!",
+    "latitude": 50.047527,
+    "longitude": 19.960011,
+    "logo": "logo/orzo.png",
+    "opening_hours": "17.00 - 00.00",
+    "min_order_amount": 40,
+    "cuisines": [
+      1,
+      13
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 10,
+  "fields": {
+    "name": "Ogr\u00f3d Kulinany",
+    "description": "W naszej restauracji przygotowujemy dania od podstaw, na \u015bwie\u017co z produkt\u00f3w wysokiej jako\u015bci.",
+    "latitude": 50.048953,
+    "longitude": 19.959626,
+    "logo": "logo/ogrod_kulinarny.png",
+    "opening_hours": "11.00 - 20.00",
+    "min_order_amount": 40,
+    "cuisines": [
+      13
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 11,
+  "fields": {
+    "name": "Tao Thai & Sushi",
+    "description": "W menu naszej restauracji znajdziecie Pa\u0144stwo specja\u0142y kuchni tajskiej, japo\u0144skiej,sushi oraz dim sum czyli azjatyckie \u201etapas\u201d.",
+    "latitude": 50.045675,
+    "longitude": 19.949054,
+    "logo": "logo/tao.png",
+    "opening_hours": "12.00 - 22.00",
+    "min_order_amount": 30,
+    "cuisines": [
+      11
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 12,
+  "fields": {
+    "name": "Babbaluci Kuchnia Sycylijska",
+    "description": "Babbaluci Sicilian Food & Wine",
+    "latitude": 50.039617,
+    "longitude": 19.977384,
+    "logo": "logo/Babbaluci.png",
+    "opening_hours": "12.00 - 20.00",
+    "min_order_amount": 40,
+    "cuisines": [
+      10
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 13,
+  "fields": {
+    "name": "Pizzeria \"U Tomali\"",
+    "description": "Pizza i zapiekanki",
+    "latitude": 50.045214,
+    "longitude": 20.04633,
+    "logo": "logo/pizza_u_tomali.png",
+    "opening_hours": "12:00-22:00",
+    "min_order_amount": 30,
+    "cuisines": [
+      8
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 14,
+  "fields": {
+    "name": "Pizzeria Nowohucka",
+    "description": "Pizza z dostaw\u0105",
+    "latitude": 50.06921,
+    "longitude": 20.052359,
+    "logo": "logo/pizzeria_nowohucka_JCzwfmf.png",
+    "opening_hours": "11:45-22:00",
+    "min_order_amount": 30,
+    "cuisines": [
+      8
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 15,
+  "fields": {
+    "name": "Skarbnica Smaku",
+    "description": "Domowe \u015bniadania i obiady",
+    "latitude": 50.07304,
+    "longitude": 20.036897,
+    "logo": "logo/skarbnica_smaku.png",
+    "opening_hours": "11:00-22:00",
+    "min_order_amount": 40,
+    "cuisines": [
+      9
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 16,
+  "fields": {
+    "name": "Pod Czarnym Koniem. Ober\u017ca",
+    "description": "Pizzeria i kuchnia polska",
+    "latitude": 50.056755,
+    "longitude": 20.05021,
+    "logo": "logo/pod_czarnym_koniem.png",
+    "opening_hours": "12:00-22:00",
+    "min_order_amount": 50,
+    "cuisines": [
+      9
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 17,
+  "fields": {
+    "name": "Manzana",
+    "description": "Najlepsza meksyka\u0144ska kuchnia w Twoim mie\u015bcie",
+    "latitude": 50.0443465,
+    "longitude": 19.9520949,
+    "logo": "logo/manzana.png",
+    "opening_hours": "09:00- 22:00",
+    "min_order_amount": 40,
+    "cuisines": [
+      6
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 18,
+  "fields": {
+    "name": "Piec na Zab\u0142ociu",
+    "description": "Pizza i inne pyszno\u015bci  prosto z pieca opalanego drewnem",
+    "latitude": 50.0851523,
+    "longitude": 19.9554972,
+    "logo": "logo/piec_na_zablociu.png",
+    "opening_hours": "12:00-21:00",
+    "min_order_amount": 30,
+    "cuisines": [
+      8
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 19,
+  "fields": {
+    "name": "Pino",
+    "description": "Restauracja europejska (kuchnia nowoczesna)",
+    "latitude": 50.0688142,
+    "longitude": 19.9290972,
+    "logo": "logo/pino.png",
+    "opening_hours": "12:00-23:00",
+    "min_order_amount": 50,
+    "cuisines": [
+      3
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 20,
+  "fields": {
+    "name": "Trzy papryczki",
+    "description": "W\u0142o\u015bka pizza",
+    "latitude": 50.0580749,
+    "longitude": 19.9387799,
+    "logo": "logo/trzy_papryczki.png",
+    "opening_hours": "12:00-22:00",
+    "min_order_amount": 40,
+    "cuisines": [
+      8
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 21,
+  "fields": {
+    "name": "Czekaj na mnie Pod Jab\u0142oni\u0105",
+    "description": "Restauracja w \u015brodku owocowego sadu, gdzie mo\u017cesz spr\u00f3bowa\u0107 przysmak\u00f3w kuchni polskiej oraz odpocz\u0105\u0107 w otoczeniu natury",
+    "latitude": 50.0657129,
+    "longitude": 19.9931267,
+    "logo": "logo/pod_jablonia.png",
+    "opening_hours": "13:00-20:00",
+    "min_order_amount": 30,
+    "cuisines": [
+      9
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 22,
+  "fields": {
+    "name": "Urban Garden",
+    "description": "Unikatowa koncepcja nowoczesnego baru, kawiarni oraz restauracji, zlokalizowana na Rynku Krakowskim. Mo\u017cesz zasmakowa\u0107 tu przysmak\u00f3w kuchni polskiej i europejskiej w eleganckim ogr\u00f3dku z widokiem na Rynek lub w cichych ogrodach na dziedzi\u0144cu, z dala od zgie\u0142ku.",
+    "latitude": 50.06066243,
+    "longitude": 19.9379593,
+    "logo": "logo/urban_garden.png",
+    "opening_hours": "7:00-21:00",
+    "min_order_amount": 50,
+    "cuisines": [
+      3
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 23,
+  "fields": {
+    "name": "Restauracja Nolio",
+    "description": "Prawdziwa w\u0142oska pizza przygotowana z w\u0142oskich produkt\u00f3w, pochodz\u0105cych z ekologicznych upraw.",
+    "latitude": 50.0493125,
+    "longitude": 19.9428594,
+    "logo": "logo/nolio.png",
+    "opening_hours": "16:00-23:00",
+    "min_order_amount": 40,
+    "cuisines": [
+      13
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 24,
+  "fields": {
+    "name": "Pierogi Mr Vincent",
+    "description": "R\u0119cznie wyrabiane pierogi z najlepszych sk\u0142adnik\u00f3w, mamy nadzieje, \u017ce smakiem dor\u00f3wnuj\u0105 \"pierogom babci\"",
+    "latitude": 50.0516768,
+    "longitude": 19.9436292,
+    "logo": "logo/mr_vincent_1CsmLnS.png",
+    "opening_hours": "12:00-22:00",
+    "min_order_amount": 30,
+    "cuisines": [
+      7
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 25,
+  "fields": {
+    "name": "Euskadi",
+    "description": "Jedyna w Polsce restauracja serwuj\u0105ca dania kuchni baskijskiej",
+    "latitude": 50.045763,
+    "longitude": 19.948335,
+    "logo": "logo/euskadi.png",
+    "opening_hours": "12:00-00:00",
+    "min_order_amount": 50,
+    "cuisines": [
+      2
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 26,
+  "fields": {
+    "name": "Hamsa",
+    "description": "Nowoczesna kuchnia Izraelska",
+    "latitude": 50.053336,
+    "longitude": 19.947593,
+    "logo": "logo/hamsa.png",
+    "opening_hours": "11:00-23:00",
+    "min_order_amount": 50,
+    "cuisines": [
+      4
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 27,
+  "fields": {
+    "name": "Pizzeria Cyklop",
+    "description": "Kochamy prost\u0105, w\u0142osk\u0105 kuchni\u0119 opart\u0105 na oryginalnych sk\u0142adnikach.",
+    "latitude": 50.052282,
+    "longitude": 19.943215,
+    "logo": "logo/pizzeria_cyklop.png",
+    "opening_hours": "10:00-22:00",
+    "min_order_amount": 30,
+    "cuisines": [
+      13
+    ]
+  }
+},
+{
+  "model": "restaurants.restaurant",
+  "pk": 28,
+  "fields": {
+    "name": "Starka",
+    "description": "W naszym menu kr\u00f3luje kuchnia polska, kt\u00f3r\u0105 wzbogacili\u015bmy o nowoczesne akcenty",
+    "latitude": 50.050864,
+    "longitude": 19.944224,
+    "logo": "logo/starka.png",
+    "opening_hours": "12:00-01:00",
+    "min_order_amount": 40,
+    "cuisines": [
+      9
+    ]
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 1,
+  "fields": {
+    "name": "Pizza Roma",
+    "description": "z zapiekanym majonezem, szynk\u0105, salami, kukurydz\u0105 i oregano",
+    "price": 28,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 1
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 2,
+  "fields": {
+    "name": "Pizza La bella",
+    "description": "z kurczakiem, salami, papryk\u0105, kukurydz\u0105 i oregano",
+    "price": 28,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 1
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 3,
+  "fields": {
+    "name": "Washington Burger",
+    "description": "mi\u0119so wo\u0142owe, ser cheddar, boczek, pomidor, og\u00f3rek konserwowy, sa\u0142ata, sos BBQ",
+    "price": 17,
+    "is_spicy": true,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 2
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 4,
+  "fields": {
+    "name": "Wrap feta",
+    "description": "ser feta, rukola, sa\u0142ata, papryka, og\u00f3rek, pomidor, cebula, oliwki, sos",
+    "price": 16,
+    "is_spicy": false,
+    "is_vegan": true,
+    "is_glutenfree": false,
+    "restaurant": 2
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 5,
+  "fields": {
+    "name": "Kurczak po wietnamsku na gor\u0105cym p\u00f3\u0142misku",
+    "description": "z ry\u017cem i sur\u00f3wk\u0105",
+    "price": 25,
+    "is_spicy": true,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 3
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 6,
+  "fields": {
+    "name": "Sajgonki 3szt.",
+    "description": "wegetaria\u0144skie",
+    "price": 10,
+    "is_spicy": false,
+    "is_vegan": true,
+    "is_glutenfree": true,
+    "restaurant": 3
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 7,
+  "fields": {
+    "name": "Panierowany kotlet schabowy",
+    "description": "z ziemniakami i kapust\u0105 na ciep\u0142o",
+    "price": 24,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 4
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 8,
+  "fields": {
+    "name": "Ros\u00f3\u0142 z kury",
+    "description": "z makaronem",
+    "price": 10,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 4
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 9,
+  "fields": {
+    "name": "Futomaki",
+    "description": "Filadelfia, \u0142oso\u015b, awokado (6 szt.)",
+    "price": 25,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": true,
+    "restaurant": 5
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 10,
+  "fields": {
+    "name": "Uramaki",
+    "description": "Filadelfia, \u0142oso\u015b, awokado (10 szt.)",
+    "price": 23,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": true,
+    "restaurant": 5
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 11,
+  "fields": {
+    "name": "Sashimi",
+    "description": "SASHIMI SMALL set \u2013 \u0142oso\u015b, tu\u0144czyk, ryba ma\u015blana po 3 kawa\u0142ki",
+    "price": 29,
+    "is_spicy": true,
+    "is_vegan": false,
+    "is_glutenfree": true,
+    "restaurant": 6
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 12,
+  "fields": {
+    "name": "Kokosowa",
+    "description": "Pikantna zupa, gotowana na bulionie i mleczku kokosowym",
+    "price": 15,
+    "is_spicy": true,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 6
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 13,
+  "fields": {
+    "name": "Golonka",
+    "description": "Golonka z pur\u00e9e chrzanowym, kiszon\u0105 kapust\u0105, gorczyc\u0105",
+    "price": 58,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": true,
+    "restaurant": 7
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 14,
+  "fields": {
+    "name": "Pol\u0119dwica wo\u0142owa",
+    "description": "Sezonowana pol\u0119dwica wo\u0142owa, knedle ze \u015bliw\u0105, sos porto",
+    "price": 89,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": true,
+    "restaurant": 7
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 15,
+  "fields": {
+    "name": "Pierogi",
+    "description": "Pierogi z ciel\u0119cin\u0105, mas\u0142em i sza\u0142wi\u0105",
+    "price": 38,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 8
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 16,
+  "fields": {
+    "name": "Pierogi",
+    "description": "Pierogi z soczewic\u0105 i sosem borowikowym",
+    "price": 36,
+    "is_spicy": false,
+    "is_vegan": true,
+    "is_glutenfree": false,
+    "restaurant": 8
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 17,
+  "fields": {
+    "name": "Burger Crispy Pulled Beef BBQ",
+    "description": "szarpana wo\u0142owina w panko, czarna bu\u0142ka ma\u015blana, mieszane sa\u0142aty,pieczona papryka, sos BBQ",
+    "price": 33,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 9
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 18,
+  "fields": {
+    "name": "Gnocci Verdude",
+    "description": "gnocci, oliwa z oliwek, czosnek, wino, b\u00f3b nowalijki, vege ricotta, karmel z czarnych oliwek",
+    "price": 32,
+    "is_spicy": false,
+    "is_vegan": true,
+    "is_glutenfree": false,
+    "restaurant": 9
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 19,
+  "fields": {
+    "name": "Krewetki na ma\u015ble",
+    "description": "krewetki 5szt. douszone na ma\u015ble i winie z suszonymi pomidorami, podawane z rukol\u0105",
+    "price": 29,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 10
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 20,
+  "fields": {
+    "name": "Risotto z kurczakiem",
+    "description": "risotto z kurczakiem, papryk\u0105, cukini\u0105, gorgonzol\u0105, czosnkiem i rukol\u0105",
+    "price": 29,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 10
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 21,
+  "fields": {
+    "name": "Geisha",
+    "description": "18 szt. , nigiri: z tamago 2 szt., nigiri z awokado 2 szt.,maki: warzywa w tempurze, uramaki:  warzywa",
+    "price": 59,
+    "is_spicy": false,
+    "is_vegan": true,
+    "is_glutenfree": false,
+    "restaurant": 11
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 22,
+  "fields": {
+    "name": "Tajskie Curry z tofu",
+    "description": "Tradycyjne, pikantne i kremowe zielone/\u017c\u00f3\u0142te/czerwone curry. Gotowane na mleku kokosowym z mn\u00f3stwem aromatycznych zi\u00f3\u0142 i przypraw.",
+    "price": 35,
+    "is_spicy": true,
+    "is_vegan": true,
+    "is_glutenfree": false,
+    "restaurant": 11
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 23,
+  "fields": {
+    "name": "Pasta allo scogilo",
+    "description": "Pasta z krewetkami,ma\u0142\u017cami, clams",
+    "price": 40,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 12
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 24,
+  "fields": {
+    "name": "Cozze Scoppiate",
+    "description": "Ma\u0142\u017ce na bia\u0142ym winie z przyprawami",
+    "price": 32,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 12
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 25,
+  "fields": {
+    "name": "Pizza Margherita",
+    "description": "Sos pomidorowy, ser mozarella",
+    "price": 17,
+    "is_spicy": false,
+    "is_vegan": true,
+    "is_glutenfree": false,
+    "restaurant": 13
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 26,
+  "fields": {
+    "name": "Pizza Pepperoni",
+    "description": "Sos pomidorowy, ser mozarella, pepperoni",
+    "price": 21,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 13
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 27,
+  "fields": {
+    "name": "Pizza Capricciosa",
+    "description": "z pomidorami San Marzano, bia\u0142\u0105 mozzarell\u0105, szynk\u0105 i pieczarkami",
+    "price": 40,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 14
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 28,
+  "fields": {
+    "name": "Pizza Piec Martenowski",
+    "description": "z pomidorami San Marzano, bia\u0142\u0105 mozzarell\u0105, cheddarem, sma\u017conym bekonem, nachosami i jalapeno",
+    "price": 42,
+    "is_spicy": true,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 14
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 29,
+  "fields": {
+    "name": "\u017burek z kie\u0142bas\u0105",
+    "description": "\u017bur, kie\u0142basa, jajko",
+    "price": 16,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 15
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 30,
+  "fields": {
+    "name": "Golonka",
+    "description": "Golonka, chleb, chrzan, musztarda",
+    "price": 38,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": null
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 31,
+  "fields": {
+    "name": "Pizza Siena",
+    "description": "z boczkiem, cebul\u0105 i oregano",
+    "price": 22,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 16
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 32,
+  "fields": {
+    "name": "Pizza Italiana",
+    "description": "z szynk\u0105, pieczarkami, cebul\u0105, czosnkiem, pomidorem i oregano",
+    "price": 23,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 16
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 33,
+  "fields": {
+    "name": "Quesadilla z Wieprzowin\u0105",
+    "description": "Pszenna tortilla faszerowana grillowan\u0105 cebul\u0105, ananasem,dipem z bia\u0142ej fasoli i serem",
+    "price": 28,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 17
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 34,
+  "fields": {
+    "name": "Tort Marchewkowy",
+    "description": "Z orzechami i mas\u0105 limonkowo-smietankow\u0105",
+    "price": 17,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 17
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 35,
+  "fields": {
+    "name": "Pizza Funghi",
+    "description": "sos pomidorowy, pieczarki, mozzarella",
+    "price": 24,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 18
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 36,
+  "fields": {
+    "name": "Pizza Bufala",
+    "description": "sos pomidorowy, mozzarella di bufala, bazylia, oliwa",
+    "price": 29,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 18
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 37,
+  "fields": {
+    "name": "\u017beberko",
+    "description": "Pieczone \u017ceberko wieprzowe, sos miodowo-pomidorowy, pieczone ziemniaki, sa\u0142atka orientalna",
+    "price": 51,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 19
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 38,
+  "fields": {
+    "name": "Krewetki z \u0142ososiem",
+    "description": "Krewetki z \u0142ososiem na ma\u015ble czosnkowym, bia\u0142e wino, marynowane grillowane warzywa",
+    "price": 54,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": true,
+    "restaurant": 19
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 39,
+  "fields": {
+    "name": "Pizza con asparagi",
+    "description": "sos parmezanowo-szparagowy, mozzarella, szparagi, p\u0142atki migdal\u00f3w",
+    "price": 31,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 20
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 40,
+  "fields": {
+    "name": "Pizza con formaggio di capra",
+    "description": "sos serowy, mozzarella, kozi ser, gruszka, figa, rukola, winogrono",
+    "price": 34,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 20
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 41,
+  "fields": {
+    "name": "\u0141oso\u015b pieczony z sosem koperkowym",
+    "description": "\u0141oso\u015b pieczony polany sosem koperkowy, puree ziemniaczane z koperkiem i zestawem sur\u00f3wek",
+    "price": 28,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 21
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 42,
+  "fields": {
+    "name": "Roladki drobiowe",
+    "description": "Roladki drobiowe nadziewane serem i pieczarkami, pieczonymi ziemniakami i coles\u0142awem",
+    "price": 26,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 21
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 43,
+  "fields": {
+    "name": "Grillowany stek z tu\u0144czyka",
+    "description": "z frytkami, grillowanym pak hoi oraz sa\u0142atk\u0105 na bazie awokado, pomidora i sera fety",
+    "price": 79,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 22
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 44,
+  "fields": {
+    "name": "Antrykot z sosem pieprzowym",
+    "description": "podany z opiekanymi ziemniakami oraz sercami rzymskiej sa\u0142aty",
+    "price": 89,
+    "is_spicy": true,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 22
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 45,
+  "fields": {
+    "name": "Raviolo",
+    "description": "Ricotta di bufala, szpinak, \u017c\u00f3\u0142tko, zielone szparagi, palone mas\u0142o, sza\u0142wia, pietruszka",
+    "price": 29,
+    "is_spicy": false,
+    "is_vegan": true,
+    "is_glutenfree": false,
+    "restaurant": 23
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 46,
+  "fields": {
+    "name": "Pizza Paradisco e inferno",
+    "description": "Pomidory San Marzano, mozarella di bufala Campana, ricotta di bufala, oliwa, bazylia",
+    "price": 34,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 23
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 47,
+  "fields": {
+    "name": "Pierogi Vincent",
+    "description": "ze sma\u017con\u0105 wo\u0142owin\u0105, cebul\u0105 i salami",
+    "price": 17,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 24
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 48,
+  "fields": {
+    "name": "Pierogi Norweskie",
+    "description": "z m\u0105ki razowej, z \u0142ososiem w\u0119dzonym, koperkiem, mozarell\u0105 i rolad\u0105 ustrzyck\u0105",
+    "price": 18,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 24
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 49,
+  "fields": {
+    "name": "Caracoles",
+    "description": "Zapiekane \u015blimaki z boczkiem w pikantnym sosie",
+    "price": 22,
+    "is_spicy": true,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 25
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 50,
+  "fields": {
+    "name": "Pulpo",
+    "description": "O\u015bmiornica z pieczonymi ziemniakami",
+    "price": 28,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 25
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 51,
+  "fields": {
+    "name": "Harira",
+    "description": "Klasyczny hummus z ciecierzycy, pasty sezamowej tahini, cytryny i czosnku podawany z pieczywem",
+    "price": 18,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 26
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 52,
+  "fields": {
+    "name": "Mezze",
+    "description": "Rozgrzewaj\u0105ca g\u0119sta zupa maroka\u0144ska z ciecierzyc\u0105",
+    "price": 16,
+    "is_spicy": true,
+    "is_vegan": true,
+    "is_glutenfree": true,
+    "restaurant": 26
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 53,
+  "fields": {
+    "name": "Diavola",
+    "description": "Pizza salami pikantne, pepperoni, kapary, karczochy, tabasco, ser mozzarella, sos pomidorowy",
+    "price": 34,
+    "is_spicy": true,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 27
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 54,
+  "fields": {
+    "name": "Caprese",
+    "description": "Pizza mozzarella, mozzarella di Bufala, pomidorki koktajlowe, rukola, sos pomidorowy",
+    "price": 28,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 27
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 55,
+  "fields": {
+    "name": "Policzki wo\u0142owe",
+    "description": "Podawane w sosie my\u015bliwskim z aromatem w\u0119dzonego boczku z domowymi kluskami \u015bl\u0105skimi i karmelizowan\u0105 marchewk\u0105.",
+    "price": 28,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 28
+  }
+},
+{
+  "model": "restaurants.course",
+  "pk": 56,
+  "fields": {
+    "name": "Pier\u015b z Kaczki",
+    "description": "W majeranku z aromatem pomara\u0144czy podawana z sosem porzeczkowym na musie jab\u0142kowym z ziemniaczkami zapiekanymi z zio\u0142ami",
+    "price": 26,
+    "is_spicy": false,
+    "is_vegan": false,
+    "is_glutenfree": false,
+    "restaurant": 28
+  }
+}
+]
