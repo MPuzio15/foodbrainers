@@ -1,1 +1,1 @@
-web: gunicorn foodbrainers.wsqi --log-file -
+web: gunicorn foodbrainers.wsgi --log-file -
