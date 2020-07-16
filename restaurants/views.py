@@ -156,6 +156,8 @@ class CreateOrder(LoginRequiredMixin, FormView):
     success_url = '/'
     template_name = 'restaurants/create_order.html'
 
+    # metoda dispatch wczytuje sie na samym poczatku
+    # i mozemy sobie tu pobierac dane ktore nam potrzebne z bazy danych, jak np ten adres
     def dispatch(self, request, *args, **kwargs):
         self.address = request.GET.get('address', '')
         return super().dispatch(request, *args, **kwargs)
@@ -188,7 +190,7 @@ class CreateOrder(LoginRequiredMixin, FormView):
         return cart
 
     def form_valid(self, form):
-
+        # w cleaned_data jest przechowywana lista słowników z danymi z formularza
         order = Order(
             user=self.request.user,
             amount=sum([x['course'].price * x['quantity']
@@ -205,5 +207,9 @@ class CreateOrder(LoginRequiredMixin, FormView):
         # zamiast n zapytan bulk tworzy nam jedno - bulk create - utworz wiele
         OrderEntry.objects.bulk_create(order_entries)
         messages.success(self.request, 'Złożono zamówienie')
-        self.request.session.flush()
+        # czysci cala sesje- czyli caly slownik danego uzytkownika, zarazem wylogowyhe tez uzytkownika z sesji
+        # self.request.session.flush()
+        # w ten sposob usuniemy tylko koszyk:
+        del self.request.session['cart']
+        # lub funkcja clear() ktora czysci caly koszyk, ale nie wylogowuje
         return super().form_valid(form)
