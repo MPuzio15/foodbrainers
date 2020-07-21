@@ -6,7 +6,7 @@
 
 <h3>Twoje zamównienie</h3>
 
-<form method='POST' action="{% url 'restaurants:create_order' %}?address={{ address|urlencode }}">
+<form class='form_create_order' method='POST' action="{% url 'restaurants:create_order' %}?address={{ address|urlencode }}">
     {% csrf_token %}
     <table> 
         {{ form.as_table }}

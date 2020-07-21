@@ -332,6 +332,7 @@ p.p_name{
 .step-links{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .step-links a, span{
     text-decoration: none;
@@ -520,4 +521,10 @@ li.success{
     top: 0;
     left: 0;
     z-index:-2;
+}
+.form_create_order{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 30vh;
 }

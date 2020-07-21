@@ -1,5 +1,6 @@
 import os
 import environ
+# zmienne wczytywane ze srodowiska naszej aplikacji, nie podajemy ich bezposrednio w kodzie wlasnie ze zmiennych srodowiskowych environ - on moze odczytywac dane z pliku .env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -125,7 +126,7 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+# whitenoise zapewnia hostowanie plikow statycznych , generuje odpowiednie naglowki zarzadzajace nasza aplikacja, paczka do hostowania
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media'
 

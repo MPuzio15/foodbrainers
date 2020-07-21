@@ -2,6 +2,7 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import F
+# obiekt F sluzy do odwolywania sie do pol i do kolumn w zapytaniu, jest jeszcze obiekt Q
 from django.forms import formset_factory
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, FormView
@@ -152,7 +153,7 @@ def cart(request):
 
 
 class CreateOrder(LoginRequiredMixin, FormView):
-    form_class = formset_factory(OrderEntryForm, extra=1)
+    form_class = formset_factory(OrderEntryForm, extra=0)
     success_url = '/'
     template_name = 'restaurants/create_order.html'
 
