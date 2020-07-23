@@ -2,7 +2,13 @@
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', serif;
+}
+body{
+    width: 100%;
+}
+main{
+    height: 100vh;
 }
 .hamburger{
     width: 38px;
@@ -57,7 +63,6 @@ nav.nav_main.active{
 }
 nav a, nav p, nav span {
     font-size: 1.2rem;
-    width: 100%;
     background: none;
     background-color: transparent;
     color: black;
@@ -73,22 +78,28 @@ nav a, nav p, nav span {
 
 nav a{
     text-decoration: none;
-    flex-basis: 20%;
+    flex-basis: 33%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 nav p{
     text-decoration: none;
-    flex-basis: 20%;
+}
+nav a:hover, .cart:hover{
+    color: darkolivegreen;
 }
 
 .main{
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     background-image: url('./images/main.png');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     background-position: center;
-    background-attachment: fixed;
     position: relative;
     background-position: center;
     background-attachment: fixed;
@@ -123,7 +134,7 @@ nav p{
 
 .main__main__page{
     width: 100%;
-    height: 90vh;
+    min-height: 100vh;
     background-color: #947163;
     background-image: url('./images/main.png');
     background-size: cover;
@@ -209,13 +220,13 @@ form{
     flex-direction: column;
     flex-wrap: nowrap;
     width: 90vw;
-    height: 75vh;
+    height: auto;
     align-items: center;
     justify-content: center;
     background-color: white;
     position: relative;
     flex-basis:70%;
-    margin-top: 25px;
+    margin-top: 100px;
 }
 .pagination{
     width: 100%;
@@ -227,7 +238,7 @@ form{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     flex-basis: 100%;
 }
@@ -240,16 +251,18 @@ form{
     font-size: 1rem;
     color: rgb(7, 71, 7);
 }
+.link{
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .item{
-    flex-basis:20%;
-    /* border: 1px solid #857256; */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: space-between;
+    align-items: center;
     justify-content: center;
-    height: 60vh;
-    width: 40vh;
-    min-width: 40vh;
     margin: 0 2%;
     color: black;
 }
@@ -265,34 +278,17 @@ form{
     height: auto;
 }
 .desc{
-    flex-basis: 30%;
+    flex-basis: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
 }
-.logo img{
- height: 20vhw;
- width: 20vhw;
-}
-div.name{
-    text-align: center;
-    font-size: 0.8rem;
-    flex-basis: 10%;
-    font-weight: 600;
-    letter-spacing: 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #453835;
-}
-p.half{
-    font-size: .6rem;
-    color: green;
-    flex-basis: 30%;
-}
-div.name p{
-    text-align: center;
+.desc > *{
+    margin: 0.2rem 0;
 }
 .name h4{
     margin-bottom: 0.5rem;
@@ -300,35 +296,7 @@ div.name p{
 .name h4 a{
    width: 100%;
 }
-.desc a{
-    text-decoration: none;
-    color: black;
-}
-.name, .other__details{
-    flex-basis: 50%;
-    justify-content: flex-end;
-}
-p.p_name{
-    font-size: .7rem;
-    font-weight: 500;
-    letter-spacing: 0;
-}
-.other__details{
-    display: flex;
-    justify-content: space-around;
-}
-.other__details p, .other__details span{
-    flex-basis: 47%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-.other__details span{
-    font-size: 0.7rem;
-}
-.opening_hours{
-    font-size: 0.8rem;
-}
+
 .step-links{
     display: flex;
     justify-content: center;
@@ -339,9 +307,11 @@ p.p_name{
     color: black;
     padding: 4px;
     letter-spacing: 2px;
+    flex-basis: 20%;
 }
-
-
+.current{
+    text-align: center;
+}
 
 /* <---------------details-----------------> */
 
@@ -453,8 +423,12 @@ p.course_name{
 }
 .yes_no p{
     flex-basis: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     color: black;
     font-size: 0.6rem;
+    width: 70%;
 }
 .add{
     text-decoration: none;
@@ -527,4 +501,336 @@ li.success{
     flex-direction: column;
     justify-content: space-between;
     min-height: 30vh;
+}
+
+@media(max-width: 1024px), handheld and (orientation: portrait){
+
+    .hamburger{
+        top: 30px;
+        right: 20px;
+    }
+    nav a, nav p, nav span {
+        font-size: 1.1rem;
+    }
+    nav.nav_main{
+        height: 80px;
+        top: -80px;
+    }
+    nav.nav_main.active{
+        top: 0px;
+        height: 80px;
+    }
+
+    .cart{
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    .main{
+        background-image: url('./images/main1024.png');
+    }
+
+    .main__main__page{
+        background-image: url('./images/main1024.png');
+    }
+    form{ 
+        width: 50%;
+    }
+    .inputs{
+        width: 100%;
+        margin-bottom: 5vh;
+    }
+    .inputs input{
+        font-weight: 200;
+        letter-spacing: 5px;
+        font-size: 1.2rem;
+    }
+    #seach__button{
+        position: absolute;
+        right: -6rem;
+        bottom: 1.3rem;
+        background-color: transparent;
+        border: none;
+        display: table-cell;
+        vertical-align: middle;
+       
+    }
+    .fa-search{
+        font-size: 3.5rem;
+    }
+
+    /* <----------------all--------------------> */
+    .items_slider{
+        width: 95vw;
+    }
+    .items_slider h3{
+        font-size: 0.9rem;
+    }
+    .desc{
+        font-size: 0.6rem;
+        margin: 0.8rem 0;
+    }
+    .pagination{
+        font-size: .7rem;
+    }
+
+    .logo{
+        flex-basis: 40%;
+    }
+    .logo img{
+        width: 65%;
+    }
+
+    .step-links a, span{
+        padding: 3px;
+        letter-spacing: 1px;
+    }
+
+}
+@media(max-width: 970px){
+    .items__group{
+        align-items: center;
+        justify-content: space-around;
+    }
+    main{
+        height: 130vh;
+    }
+
+    #map {
+        width: 70%;
+        height: 70vh;
+    }
+    .modal {
+        width: 90vw;
+        margin-top: 80px;
+        min-height: 100vh;
+        height: 150vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .modal_courses h3{
+        font-size: 1.1rem;
+        margin: 5rem 0 1rem 0;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+    .modal_courses{
+        flex-basis: 50%;
+        height: auto;
+        margin: 7rem 0 1rem 0;
+    }
+    .modal_location{
+        flex-basis: 50%;
+        margin-top: 1.5rem;
+        height: 60vh;
+
+    }
+    .modal_location h5{
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    li.success{
+        position: absolute;
+        top: 0;
+    }
+    
+    .course{
+        width: 80%;
+        padding: 10px 0 10px 30px;
+    }
+    .course p{
+        font-size: 0.6rem;
+        width: 70%;
+    }
+    p.course_name{
+        font-size: 0.8rem;
+    }
+    .yes_no{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+    .yes_no p{
+        flex-basis: 30%;
+        font-size: 0.5rem;
+    }
+    .add{
+        text-align: end;
+        margin-right: 0.8rem;
+        font-size: 0.6rem;
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+    }
+    .course p.price{
+        font-size: 0.9rem;
+        position: absolute;
+        right: 10px;
+        letter-spacing: 1px;
+        text-align: end;
+    }
+
+}
+@media(max-width: 768px), handheld and (orientation: portrait){
+    #seach__button, .fa-search{
+        display: none; 
+    }
+    nav a, nav p, nav span {
+        font-size: 1rem;
+    }
+    .hamburger{
+        width: 30px;
+        height: 25px;
+        border-top: 3px solid black;
+    }
+    .hamburger::before, .hamburger::after{
+        width: 100%;
+        border-top: 3px solid black;
+        transform: translateY(6px);
+    }
+    .hamburger::after{
+        transform: translateY(16px);
+    }
+    .cart{
+        font-size: 1rem;
+    }
+
+    form{ 
+        width: 70%;
+    }
+    .inputs{
+        width: 100%;
+        margin-bottom: 5vh;
+    }
+    .inputs input{
+        font-size: 1.1rem;
+    }
+
+    /* <----------------all--------------------> */
+    main{
+        height: 130vh;
+    }
+    .pagination{
+        font-size: .7rem;
+        flex-basis: 15%;
+        margin-top: 0;
+    }
+    .items_slider{
+        margin-top: 100px;
+        flex-grow: 1;
+        height: auto;
+    }
+    .items_slider h3{
+        margin: 1rem 0;
+    }
+    .items__group{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0.2rem 0;
+    }
+    .link{
+        flex-basis: 40%;
+        margin: 1rem 0;
+    }
+    .item{
+        align-items: center;
+    }
+
+    .logo{
+        flex-basis: 40%;
+    }
+    .logo img{
+        width: 60%;
+        height: auto;
+    }
+
+}
+
+
+@media(max-width: 450px){
+    nav.nav_main{
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: -100px;
+        width: 100%;
+    }
+    nav.nav_main.active{
+        height: 100px;
+        width: 100%;
+    }
+    nav a, nav p, nav span {
+        font-size: 0.8rem;
+    }
+    .cart{
+        font-size: 0.8rem;
+    }
+    
+    nav a{
+        flex-basis: 33%;
+    }
+    nav p{
+        flex-basis: 33%;
+    }
+
+    form{ 
+        width: 70%;
+    }
+    .inputs{
+        width: 100%;
+        margin-bottom: 5vh;
+    }
+    .inputs input{
+        font-size: 1.1rem;
+    }
+
+    /* <----------------all--------------------> */
+    main{
+        height: 290vh;
+    }
+    .pagination{
+        font-size: .6rem;
+        flex-basis: 5%;
+    }
+    .items_slider{
+        margin-top: 100px;
+        flex-grow: 1;
+        height: auto;
+    }
+    .items_slider h3{
+        font-size: 0.9rem;
+        flex-basis: 5%;
+    }
+    .link{
+        flex-basis: 60%;
+    }
+    .logo img{
+        width: 60%;
+        height: auto;
+    }
+
+    
+}
+
+@media(max-width:320px){
+    .pagination{
+        font-size: .5rem;
+        flex-basis: 3%;
+    }
+    .items_slider{
+        width: 98%;
+    }
+    .items_slider h3{
+        font-size: 0.9rem;
+        flex-basis: 3%;
+    }
+      
+    .logo img{
+        width: 90%;
+        height: auto;
+    }
 }
