@@ -132,7 +132,7 @@ MEDIA_ROOT = 'media'
 
 # po zalogowaniu i wylogowaniu tutaj ma sie znalezc uzytkownik
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = 'login'
 
 INTERNAL_IPS = [
     '127.0.0.1',

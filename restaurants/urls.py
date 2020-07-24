@@ -12,6 +12,7 @@ urlpatterns = [
     path('add_to_card/<int:course_id>', views.add_to_card, name='add_to_card'),
     path('cart/', views.cart, name='cart'),
     path('create_order/', views.CreateOrder.as_view(), name='create_order'),
+    path('signup/', views.signup, name='signup'),
 ]
 
 # widok funkcyjny- funkcja ktora django wywoluje z parametrami, dlatego podajemy

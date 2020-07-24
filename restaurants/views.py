@@ -1,5 +1,8 @@
+from django.shortcuts import render, redirect
 from django.conf import settings
 from django.contrib import messages
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import F
 # obiekt F sluzy do odwolywania sie do pol i do kolumn w zapytaniu, jest jeszcze obiekt Q
@@ -214,3 +217,18 @@ class CreateOrder(LoginRequiredMixin, FormView):
         del self.request.session['cart']
         # lub funkcja clear() ktora czysci caly koszyk, ale nie wylogowuje
         return super().form_valid(form)
+
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('restaurants:main')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/signup.html', {'form': form})

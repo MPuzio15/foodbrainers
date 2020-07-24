@@ -26,9 +26,12 @@
             <td>{{ form.password.label_tag }}</td>
             <td>{{ form.password }}</td>
         </tr>
+        <button>{{form.}}</button>
+      
     </table>
 
     <input type="submit" value="Zaloguj się" class='login_button'>
+    
     <!-- # to jest tez ukryte pole next , w obsludze formularza django sobie to odczyta i po poprawnym zalogowaniu,
     # jak ktos poda sobie w adresie ?next=restaurant/1 to wtedy uzytkownik zostanie przekierowany pod ten adres -->
     <!-- jak nie jest zalogowany i wpisuje adres jakiejs strony, to django przekieruje go do strony login 
@@ -36,7 +39,7 @@
     
     <input type="hidden" name="next" value="{{ next }}">
 </form>
-
+<a href="{% url 'restaurants:signup'%}" > <button>Załóż konto</button></a>
 {# Assumes you setup the password_reset view in your URLconf #}
 {# <p><a href="{% url 'password_reset' %}">Lost password?</a></p> #}
 
