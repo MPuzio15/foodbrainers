@@ -154,10 +154,11 @@ form{
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: 10vh;
 }
 .inputs{
     width: 100%;
-    margin-bottom: 5vh;
+    
 }
 .inputs input{
     padding: 2%;
