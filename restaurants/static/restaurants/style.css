@@ -247,7 +247,7 @@ form{
     display: flex;
     align-items: center;
     letter-spacing: 1px;
-    margin-top: 1rem;
+    margin: 2rem 0;
     font-size: 1rem;
     color: rgb(7, 71, 7);
 }
@@ -309,8 +309,9 @@ form{
     letter-spacing: 2px;
     flex-basis: 20%;
 }
-.current{
+.current, .next, .last{
     text-align: center;
+    font-size: 0.7rem;
 }
 
 /* <---------------details-----------------> */
@@ -448,10 +449,13 @@ p.course_name{
     right: 10px;
     letter-spacing: 1px;
 }
+
+/* <------------------cart--------------------> */
 .cart_container{
     background-color: white;
     width: 80vw;
-    height: 70vh;
+    height: 75vh;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -463,22 +467,31 @@ p.course_name{
     flex-basis: 10%;
     text-align: center;
     color: rgb(7, 71, 7);
-    margin: 5px 0;
+    margin: 10px 0;
+    padding: 10px o;
+    font-size: 1.2rem;
+}
+.cart_container  a{
+    font-size: .8rem;
 }
 .cart_container>table.cart_table{
     letter-spacing: 1px;
-    width: 90%;
+    width: 80%;
     flex-basis: 80%;
     text-align: center;
     border: 1px solid rgb(7, 71, 7);
     border-collapse: collapse;
     margin: 2rem;
+    font-size: .8rem;
 }
 .cart_container>table.cart_table th{
     color: rgb(7, 71, 7);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    padding: 10px 0;
 }
 .cart_container> table.cart_table th, td{
-    padding: 3px 0;
+    padding: 6px 0;
 }
 .login_table{
     border: none;
@@ -496,11 +509,66 @@ li.success{
     left: 0;
     z-index:-2;
 }
+
+
+/* <------------------order----------------> */
 .form_create_order{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 30vh;
+    width: 100%;
+}
+.order_table{
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.order_table tbody{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.order_table tbody tr{
+    flex-basis: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order_table tbody td{
+    width: auto;
+}
+.order_table tbody td input{
+    width: 40px;
+    text-align: center;
+    padding: 2px 0;
+    margin: 3px 2px;
+}
+.order_table tbody label{
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+.order_table tbody select{
+    min-width: 50%;
+    width: auto;
+}
+.button{
+    padding: 7px 20px;
+    border: 1px solid rgb(7, 71, 7);
+    color: rgb(7, 71, 7);
+    letter-spacing: 2px;
+}
+.button:hover{
+    background-color: transparent;
 }
 
 @media(max-width: 1024px), handheld and (orientation: portrait){
@@ -593,43 +661,40 @@ li.success{
         justify-content: space-around;
     }
     main{
-        height: 130vh;
+        height: 110vh;
     }
 
     #map {
-        width: 70%;
-        height: 70vh;
+        width: 50%;
+        height: 15vh;
     }
     .modal {
-        width: 90vw;
-        margin-top: 80px;
+        flex-grow:1;
         min-height: 100vh;
-        height: 150vh;
-        justify-content: space-around;
-        align-items: center;
-    }
+    } 
     .modal_courses h3{
         font-size: 1.1rem;
-        margin: 5rem 0 1rem 0;
+        margin: 1rem 0 1rem 0;
         letter-spacing: 4px;
         text-transform: uppercase;
     }
     .modal_courses{
         flex-basis: 50%;
         height: auto;
-        margin: 7rem 0 1rem 0;
+        margin: 0.5rem 0 1rem 0;
+        width: 100%;
     }
     .modal_location{
         flex-basis: 50%;
-        margin-top: 1.5rem;
-        height: 60vh;
+        margin-top: 0rem;
+        height: auto;
 
     }
     .modal_location h5{
         font-size: 0.8rem;
         letter-spacing: 2px;
         text-transform: uppercase;
-    }
+    } */
     li.success{
         position: absolute;
         top: 0;
@@ -671,7 +736,14 @@ li.success{
         letter-spacing: 1px;
         text-align: end;
     }
-
+    .cart_container{
+        width: 80vw;
+        height: 75vh;
+        margin: 0;
+    }
+    .order_table tbody{
+        width: 80%;
+    }
 }
 @media(max-width: 768px), handheld and (orientation: portrait){
     #seach__button, .fa-search{
@@ -710,7 +782,7 @@ li.success{
 
     /* <----------------all--------------------> */
     main{
-        height: 130vh;
+        height: 110vh;
     }
     .pagination{
         font-size: .7rem;
@@ -745,11 +817,33 @@ li.success{
         width: 60%;
         height: auto;
     }
-
+    .cart_container{
+        width: 90vw;
+        height: 80vh;
+    }
+    .cart_container h3, a{
+        font-size: 1rem;
+    }
+    .cart_container  a{
+        font-size: .7rem;
+    }
+    .cart_container>table.cart_table{
+        font-size: .7rem;
+    }
+    .order_table tbody{
+        width: 100%;
+    }
+    .order_table tbody label{
+        font-size: 0.8rem;
+    }
+    .order_table tbody select{
+        min-width: 50%;
+        width: 200px;
+    }
 }
 
-
 @media(max-width: 450px){
+    
     nav.nav_main{
         height: 100px;
         display: flex;
@@ -790,7 +884,7 @@ li.success{
 
     /* <----------------all--------------------> */
     main{
-        height: 290vh;
+        height: 130vh;
     }
     .pagination{
         font-size: .6rem;
@@ -813,10 +907,139 @@ li.success{
         height: auto;
     }
 
+    /* <----------------details----------> */
+
+    #map{
+        width:40vh;
+        height:40vh;
+    }
+    .details_container{
+        justify-content: flex-start;
+        margin: 0;
+        height:150vh;
+        margin:50px 0 -100px 0;;
+    }
+    .modal {
+        flex-grow:0;
+        min-height: 90vh;
+        height: auto;
+        margin: 0;
+        justify-items: stretch;
+        margin:100px 0;
+    } 
+    main{
+        min-height: 100vh;
+        height: 130vh;
+    }
+    .modal_courses{
+        margin-top: 5rem;
+    }
+    .modal_location{
+        min-height: 30vh;
+        height: 20vh;
+    }
+    .cart_container{
+        width: 100%;
+        height: 90vh;
+    }
+    .cart_container h3, a{
+        font-size: 0.8rem;
+    }
+    .cart_container  a{
+        font-size: .7rem;
+    }
+    .cart_container>table.cart_table{
+        font-size: .6rem;
+    }
+    .cart_container>table.cart_table th{
+        font-size: .7rem;
+    }
+    .order_table tbody{
+        width: 80%;
+    }
+    .order_table tbody label{
+        font-size: 0.8rem;
+        margin-right: 3px;
+    }
+    .order_table tbody select, input{
+        padding: 1px 10px;
+        font-size: 0.8rem;
+    }
+    .button{
+        padding: 5px 20px;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+    }
+    .button:hover{
+        background-color: transparent;
+    }
     
+}
+@media(max-width:360px){
+    #map{
+        width:40vh;
+        height:40vh;
+    }
+    .details_container{
+        justify-content: flex-start;
+        margin: 0;
+        height:170vh;
+        margin:50px 0 -100px 0;;
+    }
+    .modal {
+        flex-grow:0;
+        min-height: 90vh;
+        height: auto;
+        width: 100%;
+        margin: 0;
+        justify-items: stretch;
+        margin:130px 0;
+    } 
+    main{
+        min-height: 100vh;
+        height: 130vh;
+    }
+    .modal_courses{
+        margin-top: 5rem;
+    }
+    .modal_location{
+        min-height: 30vh;
+        height: 20vh;
+    }
+    .cart_container{
+        width: 100%;
+        height: 60vh;
+        min-height: 40vh;;
+    }
+    .cart_container h3, a{
+        font-size: 0.7rem;
+    }
+    .cart_container  a{
+        font-size: .6rem;
+    }
+    .cart_container>table.cart_table{
+        font-size: .4rem;
+    }
+    .cart_container>table.cart_table th{
+        font-size: .5rem;
+    }
+    .order_table tbody{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .order_table tbody label{
+        font-size: 0.7rem;
+    }
+    .order_table tbody select, input{
+        padding: 1px 6px;
+        font-size: 0.7rem;
+    }
 }
 
 @media(max-width:320px){
+    main{
+        height: 120vh;
+    }
     .pagination{
         font-size: .5rem;
         flex-basis: 3%;
@@ -833,4 +1056,8 @@ li.success{
         width: 90%;
         height: auto;
     }
+    .cart_container{
+        height: 80vh;
+    }
+    
 }
