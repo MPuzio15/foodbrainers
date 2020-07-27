@@ -512,17 +512,19 @@ li.success{
     height: auto;
     width: 100%;
 }
-.login__form div{
+.login_div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: 80%;
+    height: 40vh;
+    align-self: flex-end;
 }
 .login__form a{
     flex-basis: 20%;
-    min-height: 30vh;
-    justify-self: center;
+    justify-self: flex-start;
+    align-self: flex-start;
+    height: 40vh;
 }
 .login__form > *{
     flex-basis: 100%;
@@ -1066,5 +1068,35 @@ li.success{
     .cart_container{
         height: 80vh;
     }
-    
+    .signup_container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .signup_container form{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+    .signup_container form p{
+        font-size: 0.9rem;
+    }
+    .signup_container form p label{
+        font-size: 0.8rem;
+    }
+    .signup_container form > *{
+        text-align: center;
+    }
+    .signup_container h2{
+        padding-bottom: 2rem;
+    }
+    .login__form.signup{
+        justify-content: center;
+    }
 }

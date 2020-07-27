@@ -16,30 +16,30 @@
 {% endif %}
 <section class='signup_container'>
 <form method="post" action="{% url 'login' %}" class="login__form">
-    <div>
+    <div class='login_div'>
     {% csrf_token %}
-    <table class='login_table'>
-        <tr>
-            <td>{{ form.username.label_tag }}</td>
-            <td>{{ form.username }}</td>
-        </tr>
-        <tr>
-            <td>{{ form.password.label_tag }}</td>
-            <td>{{ form.password }}</td>
-        </tr>
-      
-    </table>
-
-    <input type="submit" value="Zaloguj się" class='button'>
-    </div>
-    <!-- # to jest tez ukryte pole next , w obsludze formularza django sobie to odczyta i po poprawnym zalogowaniu,
-    # jak ktos poda sobie w adresie ?next=restaurant/1 to wtedy uzytkownik zostanie przekierowany pod ten adres -->
-    <!-- jak nie jest zalogowany i wpisuje adres jakiejs strony, to django przekieruje go do strony login 
-    i jako next poda sobie automatycznie strone, do ktorej uzytkownik chcial przejsc -->
+        <table class='login_table'>
+            <tr>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="Zaloguj się" class='button'>
     
-    <input class="button" type="hidden" name="next" value="{{ next }}">
+        <!-- # to jest tez ukryte pole next , w obsludze formularza django sobie to odczyta i po poprawnym zalogowaniu,
+        # jak ktos poda sobie w adresie ?next=restaurant/1 to wtedy uzytkownik zostanie przekierowany pod ten adres -->
+        <!-- jak nie jest zalogowany i wpisuje adres jakiejs strony, to django przekieruje go do strony login 
+        i jako next poda sobie automatycznie strone, do ktorej uzytkownik chcial przejsc -->
+        
+        <input class="button" type="hidden" name="next" value="{{ next }}"> 
+    </div>
 </form>
 <a  href="{% url 'restaurants:signup'%}" > <button class="button"> Załóż konto</button></a>
+
 {# Assumes you setup the password_reset view in your URLconf #}
 {#<p><a href="{% url 'password_reset' %}">Lost password?</a></p>#}
 </section>

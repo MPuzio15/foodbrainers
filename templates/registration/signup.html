@@ -3,7 +3,7 @@
 {% block content %}
 <section class='signup_container'>
   <h2>Sign up</h2>
-  <form method="post">
+  <form class="signup" method="post">
     {% csrf_token %}
     {% for field in form %}
       <p>
