@@ -116,7 +116,7 @@ nav a:hover, .cart:hover{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 .login__form td, input{
     padding: 5px;
@@ -508,6 +508,28 @@ li.success{
     left: 0;
     z-index:-2;
 }
+.login__form{
+    height: auto;
+    width: 100%;
+}
+.login__form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 80%;
+}
+.login__form a{
+    flex-basis: 20%;
+    min-height: 30vh;
+    justify-self: center;
+}
+.login__form > *{
+    flex-basis: 100%;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
 
 
 /* <------------------order----------------> */
@@ -565,6 +587,7 @@ li.success{
     border: 1px solid rgb(7, 71, 7);
     color: rgb(7, 71, 7);
     letter-spacing: 2px;
+    margin: 1rem 0;
 }
 .button:hover{
     background-color: transparent;

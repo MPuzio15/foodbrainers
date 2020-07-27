@@ -14,8 +14,9 @@
 <p>Please login to see this page.</p>
 {% endif %}
 {% endif %}
-
+<section class='signup_container'>
 <form method="post" action="{% url 'login' %}" class="login__form">
+    <div>
     {% csrf_token %}
     <table class='login_table'>
         <tr>
@@ -26,21 +27,20 @@
             <td>{{ form.password.label_tag }}</td>
             <td>{{ form.password }}</td>
         </tr>
-        <button>{{form.}}</button>
       
     </table>
 
-    <input type="submit" value="Zaloguj się" class='login_button'>
-    
+    <input type="submit" value="Zaloguj się" class='button'>
+    </div>
     <!-- # to jest tez ukryte pole next , w obsludze formularza django sobie to odczyta i po poprawnym zalogowaniu,
     # jak ktos poda sobie w adresie ?next=restaurant/1 to wtedy uzytkownik zostanie przekierowany pod ten adres -->
     <!-- jak nie jest zalogowany i wpisuje adres jakiejs strony, to django przekieruje go do strony login 
     i jako next poda sobie automatycznie strone, do ktorej uzytkownik chcial przejsc -->
     
-    <input type="hidden" name="next" value="{{ next }}">
+    <input class="button" type="hidden" name="next" value="{{ next }}">
 </form>
-<a href="{% url 'restaurants:signup'%}" > <button>Załóż konto</button></a>
+<a  href="{% url 'restaurants:signup'%}" > <button class="button"> Załóż konto</button></a>
 {# Assumes you setup the password_reset view in your URLconf #}
-{# <p><a href="{% url 'password_reset' %}">Lost password?</a></p> #}
-
+{#<p><a href="{% url 'password_reset' %}">Lost password?</a></p>#}
+</section>
 {% endblock %}
