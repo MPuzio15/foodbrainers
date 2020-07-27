@@ -194,8 +194,7 @@ form{
     margin-bottom: 10vh;
 }
 .inputs{
-    width: 100%;
-    
+    width: 100%; 
 }
 .inputs input{
     padding: 2%;
@@ -535,7 +534,7 @@ li.success{
     position: absolute;
     top: 0;
     left: 0;
-    z-index:-2;
+    z-index:3;
 }
 .login__form{
     height: 10rem;
@@ -742,6 +741,7 @@ li.success{
     li.success{
         position: absolute;
         top: 0;
+        z-index:3;
     }
     
     .course{
@@ -1054,6 +1054,13 @@ li.success{
         width:40vh;
         height:40vh;
     }
+    main{
+        min-height: 100vh;
+        height: 100vh;
+    }
+    .main__main__page{
+        height: 70vh;
+    }
     .details_container{
         justify-content: flex-start;
         margin: 0;
@@ -1069,12 +1076,12 @@ li.success{
         justify-items: stretch;
         margin:130px 0;
     } 
-    main{
-        min-height: 100vh;
-        height: 130vh;
-    }
+
     .modal_courses{
         margin-top: 5rem;
+    }
+    .modal_courses h3{
+        text-align: center;
     }
     .modal_location{
         min-height: 30vh;
@@ -1107,6 +1114,27 @@ li.success{
     .order_table tbody select, input{
         padding: 1px 6px;
         font-size: 0.7rem;
+    }
+    form{ 
+        width: 90%;
+    }
+
+    .inputs input{
+        padding: 3%;
+        letter-spacing: 3px;
+        font-size: 1.4rem;
+    }
+    .items_slider{
+        margin-top: 5rem;
+        min-height: 250vh;
+    }
+    .items__group{
+        margin-top: 3rem;
+        min-height: 120vh;
+    }
+
+    .current{
+        flex-basis: 25%;
     }
 }
 

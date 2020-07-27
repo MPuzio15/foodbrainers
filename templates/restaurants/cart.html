@@ -25,4 +25,12 @@
 <a class='continue' href = "{% url 'restaurants:create_order'%}?address={{ address|urlencode }}">Złóż zamównienie</a>
 <a class='continue' href='{% url "restaurants:all" %}?address={{ address|urlencode }}'>Kontynuuj zakupy</a>
 </section>
+
+<script>
+    let message_ele = document.getElementsByClassName("success");
+    setTimeout(function(){ 
+        message_ele.style.display = "none"; 
+        }, 5000);
+    
+</script>
 {% endblock %}
