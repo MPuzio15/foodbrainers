@@ -138,6 +138,7 @@ nav a:hover, .cart:hover{
 
 .signup_container form p{
     font-size: 0.9rem;
+    padding: 0.3rem;
 }
 .signup_container form p label{
     font-size: 0.8rem;
@@ -888,7 +889,32 @@ li.success{
 }
 
 @media(max-width: 450px){
-    
+    .signup_container{
+        width: 100vw;
+        height: 90vh;  
+    }
+    .signup{
+        margin-top: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+    }
+    .signup_container form p{
+        font-size: 0.9rem;
+        padding: 0.3rem;
+    }
+    .signup_container form p label{
+        font-size: 0.8rem;
+    }
+    .button.center{
+        align-self:center;
+        justify-self:center;
+        margin: 1rem 0;
+    }
+    .signup_container h2{
+        padding-bottom: 2rem;
+    }
     nav.nav_main{
         height: 100px;
         display: flex;
