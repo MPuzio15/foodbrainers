@@ -154,15 +154,7 @@ nav a:hover, .cart:hover{
 .login__form.signup{
     justify-content: center;
 }
-.login__form{
-    width: 10rem;
-    height: 60rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    /* margin-bottom: 2rem; */
-}
+
 .login__form td, input{
     padding: 5px;
 }
@@ -546,22 +538,22 @@ li.success{
     z-index:-2;
 }
 .login__form{
-    height: auto;
+    height: 10rem;
     width: 100%;
+    margin-bottom: 0;
 }
 .login_div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40vh;
-    align-self: flex-end;
+    flex-basis: 50%;
 }
 .login__form a{
     flex-basis: 20%;
     justify-self: flex-start;
     align-self: flex-start;
-    height: 40vh;
+    flex-basis: 10%;
 }
 .login__form > *{
     flex-basis: 100%;
@@ -702,7 +694,10 @@ li.success{
         padding: 3px;
         letter-spacing: 1px;
     }
-
+    .signup_container{
+        width: 90vw;
+        height: 60vh;
+    }
 }
 @media(max-width: 970px){
     .items__group{
@@ -885,6 +880,10 @@ li.success{
     .order_table tbody select{
         min-width: 50%;
         width: 200px;
+    }
+    .signup_container{
+        width: 90vw;
+        height: 60vh;
     }
 }
 
@@ -1132,12 +1131,7 @@ li.success{
     }
     .signup_container{
         width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        justify-content: center;
-        align-items: center;   
+        height: 60vh;   
     }
     .signup_container form{
         margin-top: 50px;
@@ -1162,5 +1156,8 @@ li.success{
     }
     .login__form.signup{
         justify-content: center;
+    }
+    .login_div{
+
     }
 }
