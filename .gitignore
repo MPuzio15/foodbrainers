@@ -1,4 +1,4 @@
-.env
+.env.example
 *.sqlite3
 *.sqlite3.bak
 *.py[cob]
